@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .headline--default {
+        width: 300px;
+        transition: width 2s;
+        }
+        .headline--active {
+        transition: width 2s;
+        width: 150px;
+        border-radius: 90px;
+        }
+
+    </style>
+
+    <script>
+        function makeActive() {
+            var headline = event.srcElement;
+            if(headline.classList.contains('headline--active')) {
+                headline.classList.remove('headline--active');
+            } else {
+            headline.classList.add('headline--active');
+        }
+         }
+    </script>
+</head>
+<body>
+ <img class="headline--default" onClick="makeActive()" src="kkt1.jpg" alt="">
+ <img class="headline--default" onClick="makeActive()" src="kkt1.jpg" alt="">
+</body>
+</html>
